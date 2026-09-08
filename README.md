@@ -19,6 +19,7 @@ data/
   anotasi_200_ulasan.csv                   200 rows  manual annotation, 2 annotators
   anotasi_200_dengan_rating.csv            200 rows  annotation with star ratings
   frekuensi_kata_negatif.csv                20 rows  top negative-review terms
+  label_array.npy                       32,905 rows  sentiment labels, input to Step 5
 
 notebooks/
   step1_scraping.ipynb          data collection via google-play-scraper
@@ -34,13 +35,25 @@ models/
   model_rf.pkl                  RandomForest, n_estimators = 200, max_depth = 20
   tfidf_vectorizer.pkl          fitted TF-IDF vectorizer, 10,000 features
 
+output/figures/
+  gambar_4_1_distribusi_rating.png            Step 2
+  gambar_4_2_distribusi_sentimen.png          Step 2
+  gambar_4_3_distribusi_bulanan.png           Step 2
+  gambar_4_4_distribusi_panjang_teks.png      Step 2
+  gambar_4_5_heatmap_sentimen_bulanan.png     Step 2
+  gambar_4_6_top_kata.png                     Step 2
+  gambar_4_7_matriks_kappa.png                Step 3
+  gambar_4_8_distribusi_teks_preprocessing.png  Step 4
+
 dashboard.py                    Streamlit visualization dashboard
 requirements.txt                pinned dependencies
 LICENSE                         CC BY 4.0 legal code
 ```
 
-`output/figures_en/` is not included in this deposit. It is created automatically by
-Steps 5 and 6 when you run them, and holds the generated figures.
+Two generated artefacts are not included. `data/tfidf_matrix.npz`, the TF-IDF
+document-term matrix that Step 5 trains on, is rebuilt by running Step 4; Step 5
+cannot run without it, so Step 4 must be run first. `output/figures_en/`, the
+English-labelled figures, is created by Steps 5 and 6 when you run them.
 
 ## Data source and scope
 
