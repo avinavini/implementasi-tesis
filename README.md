@@ -38,6 +38,9 @@ dashboard.py                    Streamlit visualization dashboard
 requirements.txt                pinned dependencies
 ```
 
+`output/figures_en/` is not included in this deposit. It is created automatically by
+Steps 5 and 6 when you run them, and holds the generated figures.
+
 ## Data source and scope
 
 User reviews of the AdaKami application (application ID `com.adakami.dana.kredit.pinjaman`) published on the Google Play Store between January and December 2025, collected in Indonesian only, with no rating filter applied.
@@ -63,7 +66,15 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-Run the notebooks in order, `step1` through `step6`. Step 1 re-scrapes from the live Play Store and will therefore return a different corpus; to reproduce the published figures exactly, skip Step 1 and start from `data/ulasan_adakami_2025_raw.csv`.
+Run the notebooks in order, `step1` through `step6`. They resolve `../data/` and `../models/` relative to their own location, so open them from inside `notebooks/` and leave the directory layout above unchanged.
+
+Step 1 re-scrapes from the live Play Store and will therefore return a different corpus; to reproduce the published figures exactly, skip Step 1 and start from `data/ulasan_adakami_2025_raw.csv`. Step 1 is also the one notebook written for Google Colab: it writes to the working directory and downloads the result via `google.colab.files`, so if you run it locally, move its output into `data/` yourself.
+
+Run the dashboard from the repository root, where it reads `data/ulasan_dengan_prediksi.csv`:
+
+```bash
+streamlit run dashboard.py
+```
 
 ## Key results
 
