@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Salinan hasil eksekusi nbconvert (bukan sumber)
+notebooks/_run_*.ipynb
+
+# Editor & OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# CATATAN: data/, models/ dan output/ SENGAJA dilacak git.
+# Berkas .csv, .pkl, .npz, .npy dan figur di dalamnya adalah bagian dari
+# deposit ini dan mendukung angka yang dilaporkan. Jangan diabaikan.
