@@ -5,7 +5,7 @@ Replication package for the study comparing Naive Bayes Classifier (NBC), Suppor
 **Authors:** Avini Fazrie, Sfenrianto
 **Affiliation:** Information Systems Management Department, BINUS Graduate Program, Bina Nusantara University, Jakarta, Indonesia
 **Related publication:** *Sentiment Analysis of AdaKami Online Lending Application Reviews Using Comparative Machine Learning*, ICIMTech 2026
-**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0), full text in [`LICENSE`](LICENSE)
 
 ---
 
@@ -36,6 +36,7 @@ models/
 
 dashboard.py                    Streamlit visualization dashboard
 requirements.txt                pinned dependencies
+LICENSE                         CC BY 4.0 legal code
 ```
 
 `output/figures_en/` is not included in this deposit. It is created automatically by
@@ -102,6 +103,27 @@ An interactive version of the results is deployed at
 https://adakami-sentiment-dashboard-bz7nyyzveyq4u7tztklz9s.streamlit.app/
 with source code at
 https://github.com/avinavini/adakami-sentiment-dashboard
+
+## License
+
+The data and code in this repository are released under the Creative Commons
+Attribution 4.0 International licence (CC BY 4.0). The full legal code is in
+[`LICENSE`](LICENSE); a plain-language summary is at
+https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 Avini Fazrie and Sfenrianto.
+
+You are free to share and adapt this material, including commercially, provided
+you give appropriate credit, link to the licence, and indicate whether changes
+were made. Attribute as:
+
+> Fazrie, A. and Sfenrianto (2026). *Sentiment Analysis of AdaKami Online Lending
+> Application Reviews: Data and Code.* Licensed under CC BY 4.0.
+
+The licence covers this deposit. It does not extend to the underlying review
+text, which remains the work of the Google Play users who wrote it, nor to any
+third-party dependency listed in `requirements.txt`, which carries its own
+licence.
 
 ## Citation
 
