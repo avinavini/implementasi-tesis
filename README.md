@@ -20,6 +20,9 @@ data/
   anotasi_200_dengan_rating.csv            200 rows  annotation with star ratings
   frekuensi_kata_negatif.csv                20 rows  top negative-review terms
   label_array.npy                       32,905 rows  sentiment labels, input to Step 5
+  tfidf_matrix.npz              32,905 x 10,000  TF-IDF matrix, input to Step 5
+  X_test.npz                     6,581 x 10,000  held-out test features
+  y_test.npy                         6,581 rows  held-out test labels
 
 notebooks/
   step1_scraping.ipynb          data collection via google-play-scraper
@@ -50,10 +53,13 @@ requirements.txt                pinned dependencies
 LICENSE                         CC BY 4.0 legal code
 ```
 
-Two generated artefacts are not included. `data/tfidf_matrix.npz`, the TF-IDF
-document-term matrix that Step 5 trains on, is rebuilt by running Step 4; Step 5
-cannot run without it, so Step 4 must be run first. `output/figures_en/`, the
-English-labelled figures, is created by Steps 5 and 6 when you run them.
+The TF-IDF matrix and the held-out test set are included, so Step 5 runs without
+having to rebuild them in Step 4 first. They were produced with the fitted
+vectorizer in `models/`, and the committed models score exactly the results
+reported below on this test set.
+
+`output/figures_en/`, the English-labelled figures, is not included; Steps 5 and
+6 create it when you run them.
 
 ## Data source and scope
 
