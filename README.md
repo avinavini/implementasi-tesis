@@ -47,6 +47,17 @@ output/figures/
   gambar_4_6_top_kata.png                     Step 2
   gambar_4_7_matriks_kappa.png                Step 3
   gambar_4_8_distribusi_teks_preprocessing.png  Step 4
+  gambar_4_9_perbandingan_model.png           Step 5
+  gambar_4_10_confusion_matrix.png            Step 5
+  gambar_4_11_tren_sentimen_bulanan.png       Step 6
+  gambar_4_12_wordcloud_negatif.png           Step 6
+  gambar_4_13_frekuensi_kata_negatif.png      Step 6
+
+output/figures_en/
+  gambar_4_9_perbandingan_model.png           Step 5, English labels
+  gambar_4_10_confusion_matrix.png            Step 5, English labels
+  gambar_4_11_tren_sentimen_bulanan.png       Step 6, English labels
+  gambar_4_12_wordcloud_negatif.png           Step 6, English labels
 
 dashboard.py                    Streamlit visualization dashboard
 requirements.txt                pinned dependencies
@@ -58,8 +69,6 @@ having to rebuild them in Step 4 first. They were produced with the fitted
 vectorizer in `models/`, and the committed models score exactly the results
 reported below on this test set.
 
-`output/figures_en/`, the English-labelled figures, is not included; Steps 5 and
-6 create it when you run them.
 
 ## Data source and scope
 
