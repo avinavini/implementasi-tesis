@@ -117,7 +117,11 @@ Majority-class baseline: accuracy 0.6485, F1-macro 0.2623.
 
 Inter-annotator agreement on the 200-review validation sample: Cohen's kappa = 0.8595 (almost perfect).
 
-Wilcoxon signed-rank test on per-fold F1-macro, NBC versus SVM: W = 0, p = 0.0625. The difference is not statistically significant at alpha = 0.05. With only five paired folds, 0.0625 is the smallest attainable p-value when all differences share the same sign, so this test sits at the limit of its resolution.
+Agreement between the rating-based labels and the manual annotation: Cohen's kappa = 0.4976 for annotator 1 and 0.4984 for annotator 2, both below the 0.60 threshold set for the study. The rating-based labels are still used, and this gap is reported as a limitation.
+
+Wilcoxon signed-rank test on per-fold F1-macro (Step 5, cell *Wilcoxon 3 Model*): NBC versus SVM W = 0, p = 0.0625; NBC versus RF W = 0, p = 0.0625; SVM versus RF W = 4, p = 0.4375. None is significant at alpha = 0.05. With only five paired folds, 0.0625 is the smallest attainable p-value when all differences share the same sign, so this test sits at the limit of its resolution. The RF per-fold scores are recomputed from the saved model and average 0.6213 on an Apple Silicon Mac, 0.0001 below the 0.6214 printed by the original GridSearchCV run. The difference comes from the machine, not from the data.
+
+Duplicate reviews across the split (Step 5, cell *3b*): 1,802 of the 6,581 test reviews (27.4 percent) have raw text identical to a training review, and 2,825 (42.9 percent) after preprocessing. On the remaining 3,756 test reviews, F1-macro is NBC 0.6208, SVM 0.6032, RF 0.6003 (Step 5, cell *Duplikat*). The ranking is unchanged, and the table above remains the main result.
 
 Predicted sentiment distribution across all 32,905 reviews: positive 19,061 (57.9 percent), negative 10,030 (30.5 percent), neutral 3,814 (11.6 percent).
 
